@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.payment-container {
+    
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section {
+    display: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Select Payment Method</h2>
+        <label>
+            <input type="radio" name="paymentMethod" value="card" checked>
+            Credit/Debit Card
+        </label>
+        <label>
+            <input type="radio" name="paymentMethod" value="online">
+            Online Payment
+        </label>
+
+        <div id="cardPayment" class="payment-section">
+            <!-- Card payment form -->
+            <form>
+                <h2>Card Payment</h2>
+                
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number" required>
+        
+                <label for="cardHolder">Card Holder Name</label>
+                <input type="text" id="cardHolder" placeholder="Enter card holder name" required>
+        
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+        
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="Enter CVV" required>
+        
+                <button type="button" onclick="processPayment()">Make Payment</button>
+            </form>
+            <!-- Example: Card number, expiration date, CVV, etc. -->
+            <form id="cardPaymentForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+                <!-- Add more card details fields as needed -->
+                <button type="button" onclick="processCardPayment()">Pay with Card</button>
+            </form>
+        </div>
+
+        <div id="onlinePayment" class="payment-section">
+            <!-- Placeholder for the online payment gateway (replace this with your actual integration) -->
+            <button type="button" onclick="processOnlinePayment()">Pay Online</button>
+        </div>
+
+        <div id="qrPopup" class="popup">
+            <<!-- Placeholder for the QR code popup -->
+            <img src="C:\Users\SURFACE\Downloads\393573753_336572758863439_4745376378377256718_n.jpg" alt="QR Code">
+            <span class="close" onclick="closeQRPopup()">&times;</span>
+            <img id="qrCode" src="C:\Users\SURFACE\Downloads\393573753_336572758863439_4745376378377256718_n.jpg" alt="QR Code">
+        </div>
+    </div>
+
+    <script src="scriptt.js"></script>
+</body>
+</html>

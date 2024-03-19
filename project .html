@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable Car Ticketing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #8994c7;
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #000000;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label, input {
+            margin: 10px 0;
+        }
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ponyo Cablecar</h1>
+
+        <!-- Signup Form -->
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+            <button type="button" onclick="signup()">Sign Up</button>
+        </form>
+
+        <!-- Login Form -->
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function signup() {
+            var signupUsername = document.getElementById('signupUsername').value;
+            var signupPassword = document.getElementById('signupPassword').value;
+            // Implement server-side logic to store user information securely
+            alert('User signed up: ' + signupUsername);
+        }
+
+        function login() {
+            var loginUsername = document.getElementById('loginUsername').value;
+            var loginPassword = document.getElementById('loginPassword').value;
+            // Implement server-side logic for user authentication
+            alert('User logged in: ' + loginUsername);
+        }
+    </script>
+        <div class="container">
+            <h1>Welcome to Cable Car Ticketing</h1>
+            <p>Enjoy a scenic ride with breathtaking views!</p>
+            <form id="ticketForm">
+                <label for="ticketQuantity">Number of Tickets:</label>
+                <input type="number" id="ticketQuantity" name="ticketQuantity" min="1" max="10" value="1">
+                <button type="button" id="purchaseButton">Purchase Tickets</button>
+            </form>
+        </div>
+    
+        <script>
+            document.getElementById('purchaseButton').addEventListener('click', function() {
+                var ticketQuantity = document.getElementById('ticketQuantity').value;
+                var totalPrice = ticketQuantity * 25; // Assuming each ticket costs $25
+                alert('Total Price: $' + totalPrice.toFixed(2));
+            });
+        </script>
+</body>
+</html>
