@@ -12,48 +12,97 @@
         <img src="logo.png" alt="Cable Car Logo">
     </header>
     <nav>
-        <a href="#">Home</a>
-        <a href="tickets.php">Tickets</a>
+        <a href="homepage.html">Tickets</a>
+        <a href="tickets.php">Book</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
     </nav>
 
     <main>
     <section class="hero">
-            <img src="C:\Users\SURFACE\Downloads\cable-cars-in-nepal.png" alt="view image" width="1400px">
+        <img src="C:\Users\SURFACE\Downloads\vecteezy_the-cable-car-and-grey-sky-on-the-background-bottom-view_3227684.jpg" width="1400" height="930" alt="cablecar">
+        <div class="centered"><h1>Ponyo</h1>
+            <P>Book your tickets for an unforgettable experience!</P></div>
+        
     </section>
-    <section>
-        <h1>Tickets</h1>
-        Select the number of cable car 
-        <select name="number of cablecar" id="c_car">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <br>
-        Select the number of people
-        <select name="number of cablecar" id="c_car" placeholder="4 person/cablecar">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select><br>
-        <br>
-        <a href="tickets.php" class="cta-button">Book Now</a>
-    </section>
-    </main>
-    <!-- Additional sections and content as needed -->
+    <section class="tickets">
+        <h1> Tickets price and category</h1>
+        </section>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>TICKET TYPE</th>
+                    <th>ONE WAY</th>
+                    <th>TWO WAY</th>
+                </tr>
+                <tr>
+                    <td>Nepali Adult</td>
+                    <td>Rs 500</td>
+                    <td>Rs 900</td>
+                </tr>
+                <tr>
+                    <td>Nepali Childern</td>
+                    <td>Rs 200</td>
+                    <td>Rs 300</td>
+                </tr>
+                
+                </tr>
+            </table>
+        </div>
 
-    <footer>
-        <!-- Footer content here -->
-    </footer>
-    <script src="script.js"></script>
+    <section class="conditions">
+        <h1>Conditions for booking tickets</h1>
+        <ul>
+            <li>The above rate are inclusive of all local taxes and applicable VAT.</li>
+            <li>Payment should be made in the counter. No online payment acceptable</li>
+            <li>Bargaining for the ticket price is not acceptable</li>
+            <li>Child is categorized by their height. Children above 3 feet and up to 4 feet height qualifies for child rate.</li>
+                    </ul>
+    </section>
+
+    <div class="button">
+        <button class="book-button" onclick="redirectToTicketPage()">Book Tickets</button>
+    </div>
+    <script>
+        function redirectToTicketPage() {
+            window.location.href = "ticket_page.html";
+        }
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section>
+    <div class="container">
+        <h1>About Us</h1> 
+        <p></p>
+     </div>
+     </section>
+    </main>
+     <footer>
+         &copy; 2021 Cable Car Ticket Booking
+     </footer>
+ 
+    
+  
+    
 </body>
 </html>
