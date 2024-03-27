@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable Car Ticketing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ponyo Cablecar</h1>
+        <img src="C:\Users\SURFACE\Downloads\logoo.png" alt="Cable Car Logo" height="50" width="140">
+    </header>
+    <nav>
+        <a href="homepage.html">Tickets</a>
+        <a href="ticket page.html">Book</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section class="ticket">
+        
+            <h1>Tickets</h1>
+            <div class="container">
+            <div class="box">
+                <input type="text" class="text-input" readonly value="Approx duration: 10 minutes">
+            </div>
+            <div class="box">
+                <input type="text" class="text-input" readonly value="Number of gondolas: 10 gondolas">
+            </div>
+            <div class="box">   
+                <input type="text" class="text-input" readonly value="Passangers per gondolas: 4 passangers">
+            </div>
+            <div class="box">
+                <input type="text" class="text-input" readonly value="Distance: 2.2km (1.3 miles)">
+            </div>
+        </div>
+
+        Type of ticket<br>
+        <input type="radio" name="Type" value="One way"> One way
+        <input type="radio" name="Type" value="Two way"> Two way
+        <br><br>
+        Number of adults<br>
+        <select name="number of adults" id="adults" required>
+            <option> select number of adults</option>
+            <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        
+        </select><br>
+        <br>
+        Number of childern<br>
+        <select name="number of childern" id="childern" required>
+            <option> select number of childern</option>
+            <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        
+        </select><br>
+        <br>
+        <input type="datetime-local">
+        
+    </section>
+    </main>
+    </body>
+    </html>
